@@ -16,5 +16,6 @@ setup(name='PL',
       license='CC0-1.0 license',
       packages=find_packages(),
       author_email='suebusiness@proton.me',
+      include_package_data=True,
       requires=read_requirements()
      )
