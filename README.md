@@ -114,5 +114,18 @@ Allows you to change the following (These changes will be applied as default fro
 ```
 
 
+# Print Out Logs
 
+<h4>#main.py</h4>
 
+```py
+import pl
+
+pl.Out(cont="Welcome",fl=__file__)
+```
+
+<h4>#Console</h4>
+
+```
+[INFO] |[e:\CDR\PL\temp.py] [2022-09-05] [01:11:30.771624] : Welcome
+```
