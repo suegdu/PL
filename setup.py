@@ -1,4 +1,3 @@
-
 from setuptools import setup, find_packages
 
 
@@ -17,6 +16,7 @@ setup(
     description="Personal Python Package for Logging.",
     packages=find_packages(where=".", exclude=["tests"]),
     install_requires=read_requirements(),
+    version="1.0.0",
     #install_requires=[
     #    "setuptools>=45.0",
     #],
