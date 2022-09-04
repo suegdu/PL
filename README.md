@@ -121,7 +121,7 @@ Allows you to change the following (These changes will be applied as default fro
 ```py
 import pl
 
-pl.Out(cont="Welcome",fl=__file__)
+pl.Out(cont="Welcome",fl=__file__)      # (Basic definition. For more, The Out function does apply to everything that the Log function does, the setup way for example.)
 ```
 
 <h4>#Console</h4>
