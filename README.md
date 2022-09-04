@@ -1,6 +1,7 @@
 # PL Logging
 Personal Python Package for Logging.
 
+Version: 1.0.0
 # Presentation
 <h4>#main.py :</h4>
 
@@ -100,5 +101,18 @@ Allows you to change the following (These changes will be applied as default fro
     R_time:bool=True
     
 ```
+
+# Log Function Definitions
+
+```
+--------
+* fr: File format.  e.g: `fr="txt"`
+* cont: Content to log.  e.g: `cont="Hello"`
+* lev: Logging level.  e.g: `lev="INFO"`
+* fn: File name.  e.g: `fn="logs"`
+* fl: File trace(Path)  e.g: `fl=__file__`
+```
+
+
 
 
