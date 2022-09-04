@@ -4,7 +4,7 @@ Personal Python Package for Logging.
 Version: 1.0.0  
 Installation: 
 ```
----> pip install https://github.com/suegdu/PL/archive/pl.zip
+pip install https://github.com/suegdu/PL/archive/pl.zip
 ```
 # Presentation
 <h4>#main.py :</h4>
