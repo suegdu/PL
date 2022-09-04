@@ -2,10 +2,12 @@
 Personal Python Package for Logging.
 
 Version: 1.0.0  
-Installation:
+<h4>Installation:</h4>
+
 ```
 pip install git+https://github.com/suegdu/PL.git
 ```
+
 # Presentation
 <h4>#main.py :</h4>
 
