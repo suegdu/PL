@@ -2,10 +2,7 @@
 Personal Python Package for Logging.
 
 Version: 1.0.0  
-Installation: 
-```
-pip install https://github.com/suegdu/PL/archive/master.zip
-```
+
 # Presentation
 <h4>#main.py :</h4>
 
