@@ -135,3 +135,7 @@ pl.Out(cont="Welcome",fl=__file__)      # (Basic definition. For more, The Out f
 ```
 [INFO] |[e:\CDR\PL\temp.py] [2022-09-05] [01:11:30.771624] : Welcome
 ```
+
+
+<a href="mailto:suebusiness@proton.me">Contact</a>  
+<a href="https://www.paypal.com/paypalme/suegdu">Donate</a>
