@@ -124,8 +124,9 @@ express Statement of Purpose.
 from pathlib import Path
 from datetime import datetime
 import sys
+
 sysvalue = sys.exc_info()[1]
-class setup:
+class sett:
     """An optional Setup for Logging with PL.
 Allows you to change the following (These changes will be applied as default from the start of your script while Logging with PL. Allows you to not define these specific variables each time while calling the Logger.):
 ------------
@@ -154,26 +155,26 @@ class Program:
     """Program frame should not be called. Maintain the functioning class."""
     @classmethod
     def R_return(self,value):
-        """Will check and return optional values from the `setup` class."""
+        """Will check and return optional values from the `sett` class."""
         Em:str=str()
         now = datetime.now()
         if value=="date":
-         if setup.R_date==False:
+         if sett.R_date==False:
             return Em
         if value=="time":
-         if setup.R_time==False:
+         if sett.R_time==False:
             return Em
         if value=="date":
-         if setup.R_date==True:
+         if sett.R_date==True:
             return f"[{datetime.date(now)}] "
         if value=="time":
-         if setup.R_time==True:
+         if sett.R_time==True:
             return f"[{datetime.now().time()}] "
         #if value=="file":
-        #    if setup.F_file==False:
+        #    if sett.F_file==False:
         #        return Em
         #if value=="file":
-        #    if setup.F_file==True:
+        #    if sett.F_file==True:
         #        return f"[{__file__}] "
     @classmethod
     def pl_write(self,fr:str="log",cont:str="Log from PL",lev:str="INFO",fn:str="pl_log",fl:str=str()):
@@ -186,13 +187,13 @@ class Program:
         #file_return = self.R_return("file")
         defaccus = f"[{lev}] |{f_localrt}{date_return}{time_return}: {cont}" 
         defpath = Path(__file__).resolve().parent
-        if setup.F_format !="log"or fr and setup.F_name !=None:
+        if sett.F_format !="log"or fr and sett.F_name !=None:
             try:
-             with open(f"{defpath}\\{setup.F_name}.{setup.F_format}","a") as PLprogF:
+             with open(f"{defpath}\\{sett.F_name}.{sett.F_format}","a") as PLprogF:
               PLprogF.write(f"{defaccus}\n")
             except:
                 print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
-        elif setup.F_format =="log" and setup.F_name==None:
+        elif sett.F_format =="log" and sett.F_name==None:
             try:
              with open(f"{defpath}\\{fn}.{fr}","a") as PLprogF:
               PLprogF.write(f"{defaccus}\n")
@@ -207,12 +208,12 @@ class Program:
         date_return = self.R_return("date")
         time_return = self.R_return("time")
         defaccus = f"[{lev}] |{f_localrt}{date_return}{time_return}: {cont}" 
-        if setup.F_format !="log" and setup.F_name !=None:
+        if sett.F_format !="log" and sett.F_name !=None:
             try:
               print(f"{defaccus}\n")
             except:
                 print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
-        elif setup.F_format =="log" and setup.F_name==None:
+        elif sett.F_format =="log" and sett.F_name==None:
             try:
               print(f"{defaccus}\n")
             except:
@@ -228,7 +229,7 @@ Main frame for logging.
 * fn: File name.  e.g: `fn="logs"`
 * fl: File trace(Path)  e.g: `fl=__file__`
 
-For some default applies try setting the `setup` class.
+For some default applies try settting the `sett` class.
     """
     try:
      Program.pl_write(fr=fr,cont=cont,lev=lev,fn=fn,fl=fl)
@@ -244,7 +245,7 @@ Main frame for printing logs.
 * lev: Logging level.  e.g: `lev="INFO"`
 * fl: File trace(Path)  e.g: `fl=__file__`
 
-For some default applies try setting the `setup` class.
+For some default applies try settting the `sett` class.
 """
     try:
         Program.pl_sysout(cont=cont,lev=lev,fl=fl)
