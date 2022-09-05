@@ -50,7 +50,7 @@ pl.Log(fl=__file__,cont="Welcome",lev="INFO",fn="MyLog")   # Call
 
 For more details about customizing defaults, Check the `sett` Class
 
-# Setup's avails
+# Sett's avails
 <h4>#main.py</h4>
 
 ```py
