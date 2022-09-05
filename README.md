@@ -14,7 +14,7 @@ pip install git+https://github.com/suegdu/PL.git
 ```py
 import pl
 
-pl.setup.F_name = "LogFile"
+pl.sett.F_name = "LogFile"
 
 
 pl.Log(cont="Welcome",fl=__file__,lev="INFO")
@@ -33,8 +33,8 @@ pl.Log(cont="Welcome",fl=__file__,lev="INFO")
 ```py
 import pl
 
-pl.setup.F_format = "log" 	# Define The File Extension.(Default: log)
-pl.setup.R_date = False 	# Won't Record Date With Logging.
+pl.sett.F_format = "log" 	# Define The File Extension.(Default: log)
+pl.sett.R_date = False 	# Won't Record Date With Logging.
 
 pl.Log(fl=__file__,cont="Welcome",lev="INFO",fn="MyLog")   # Call
 
@@ -48,7 +48,7 @@ pl.Log(fl=__file__,cont="Welcome",lev="INFO",fn="MyLog")   # Call
 
 
 
-For more details about customizing defaults, Check the `setup` Class
+For more details about customizing defaults, Check the `sett` Class
 
 # Setup's avails
 <h4>#main.py</h4>
@@ -57,19 +57,19 @@ For more details about customizing defaults, Check the `setup` Class
 import pl
 
 
-# This is a pre-definition for logging, instead of declaring variables each time while calling the Log function, Define it once at the beginning of your script. It's a setup.
+# This is a pre-definition for logging, instead of declaring variables each time while calling the Log function, Define it once at the beginning of your script. It's a sett.
 
-pl.setup.F_format = "log"        # Define The File Extension.(Default: log)
-pl.setup.R_date = True       # Will Record Date With Logging.(Default: True)
-pl.setup.R_time = False      # Won't Record Time With Logging.(Default: True)
-pl.setup.F_name = "Mylogs"      # Define The File Name.(Default: pl_log)
+pl.sett.F_format = "log"        # Define The File Extension.(Default: log)
+pl.sett.R_date = True       # Will Record Date With Logging.(Default: True)
+pl.sett.R_time = False      # Won't Record Time With Logging.(Default: True)
+pl.sett.F_name = "Mylogs"      # Define The File Name.(Default: pl_log)
 
 pl.Log(fl=__file__,cont="Welcome",lev="INFO") # Call
 #     |
 #     |
 #     |
 # ---------------------------------------------------------------------------------
-# Didn't define 'fn' and 'fr' because it's already defined under the setup section.
+# Didn't define 'fn' and 'fr' because it's already defined under the sett section.
 # As the same role applies to 'R_time' and 'R_date'.
 # ---------------------------------------------------------------------------------
 
@@ -81,10 +81,10 @@ pl.Log(fl=__file__,cont="Welcome",lev="INFO") # Call
 ```log
 [INFO] |[e:\CDR\PL\temp.py] [2022-09-05] : Welcome
 ```
-<h4>#class: setup</h4>
+<h4>#class: sett</h4>
 
 ```py
-class setup:
+class sett:
     """An optional Setup for Logging with PL.
 Allows you to change the following (These changes will be applied as default from the start of your script while Logging with PL. Allows you to not define these specific variables each time while calling the Logger.):
 ------------
@@ -127,7 +127,7 @@ Allows you to change the following (These changes will be applied as default fro
 ```py
 import pl
 
-pl.Out(cont="Welcome",fl=__file__)      # (Basic definition. For more, The Out function does apply to everything that the Log function does, the setup way for example.)
+pl.Out(cont="Welcome",fl=__file__)      # (Basic definition. For more, The Out function does apply to everything that the Log function does, the sett way for example.)
 ```
 
 <h4>#Console</h4>
