@@ -124,7 +124,7 @@ express Statement of Purpose.
 from pathlib import Path
 from datetime import datetime
 import sys
-
+import requests
 sysvalue = sys.exc_info()[1]
 class sett:
     """An optional Setup for Logging with PL.
@@ -218,8 +218,37 @@ class Program:
               print(f"{defaccus}\n")
             except:
                 print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
-
-def Log(fr:str="log",cont:str="Log from PL",lev:str="INFO",fn:str="pl_log",fl:str=str()):
+    @classmethod
+    def pl_dswebhook(self,cont:str="A Log from PL.",lev:str="INFO",fl:str=str(),webhook:str=None,username:str="PL Logging",avatar_url:str=None):
+        """Discord Webhook frame.(Note: if you did provide an unvalid avatar_url then the webhook wont be sent without any errors.)"""
+        avatar_formats = [".jpeg",".JPEG",".png",".PNG",".JPG",".webp",".WEBP",".psd",".PSD",".svg",'.SVG']
+        defdefdom = "https://discord.com/api/webhooks/"
+        Tav = avatar_url
+        f_localrt = fl
+        if fl!=str():
+            f_localrt = f"[{fl}] "
+        date_return = self.R_return("date")
+        time_return = self.R_return("time")
+        defaccus = f"[{lev}] |{f_localrt}{date_return}{time_return}: {cont}" 
+        loccont  = f"```{defaccus}```"
+        if avatar_url == None:
+            Tav = "https://i.ibb.co/g9zjJmG/2022-09-17-22-00-51.png"
+        if webhook==None:
+            return print(f"{__file__}: (PL) Please provide a Webhook link.")
+        elif defdefdom not in webhook:
+            return print(f"{__file__}: (PL) Please provide a valid Discord Webhook link.")
+        #elif avatar_url not in avatar_formats:
+        #    return print(f"{__file__}: (PL) Please provide a valid 'Image' link format for the avatar_url.\nSupported formats are:  {' '.join(p for p in avatar_formats)}")
+        try:
+            data = {
+            "content" : f"{loccont}",
+            "username" : f"{username}",
+            "avatar_url": f"{Tav}"
+            }
+            requests.post(webhook, json = data)
+        except:
+            print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
+def Log(fr:str="log",cont:str="Log from PL.",lev:str="INFO",fn:str="pl_log",fl:str=str()):
     """
 Main frame for logging.
 --------
@@ -229,14 +258,13 @@ Main frame for logging.
 * fn: File name.  e.g: `fn="logs"`
 * fl: File trace(Path)  e.g: `fl=__file__`
 
-For some default applies try settting the `sett` class.
+For some default applies try setting the `sett` class.
     """
     try:
      Program.pl_write(fr=fr,cont=cont,lev=lev,fn=fn,fl=fl)
     except:
     
      print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
-
 def Out(cont:str="Log from PL",lev:str="INFO",fl:str=str()):
     """
 Main frame for printing logs.
@@ -245,9 +273,26 @@ Main frame for printing logs.
 * lev: Logging level.  e.g: `lev="INFO"`
 * fl: File trace(Path)  e.g: `fl=__file__`
 
-For some default applies try settting the `sett` class.
+For some default applies try setting the `sett` class.
 """
     try:
         Program.pl_sysout(cont=cont,lev=lev,fl=fl)
+    except:
+     print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
+def ds_webhook(cont:str="A Log from PL.",lev:str="INFO",fl:str=str(),webhook:str=None,username:str="PL Logging",avatar_url:str=None):
+    """
+Main frame for logging with Discord's Webhook.
+---
+* cont: Content to log.  e.g: `cont="Hello"`
+* lev: Logging level.  e.g: `lev="INFO"`
+* fl: File trace(Path)  e.g: `fl=__file__`
+* webhook: A valid Discord Webhook url.
+* username: A custom Discord Webhook agent username.
+* avatar_url: A custom Discord Webhook agent avatar.(if you did provide an unvalid avatar url it the log wont be sent without any errors, leaves you with unknown exception.)
+
+For some default applies try setting the `sett` class.
+"""
+    try:
+        Program.pl_dswebhook(cont=cont,lev=lev,fl=fl,webhook=webhook,username=username,avatar_url=avatar_url)
     except:
      print(f"{__file__}: (PL) Something went wrong. Possible Tracback: {sysvalue}")
