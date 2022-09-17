@@ -7,7 +7,7 @@ Author: suegdu
 --
 """
 from .pl import *
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 __title__ = "PL"
 __author__ = "suegdu"
 __github__ = "https://github.com/suegdu"
