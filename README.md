@@ -106,7 +106,7 @@ pl.ds_webhook(webhook="i am a discord webhook url.",cont="Welcome",fl=__file__)
 <h4>#The Discord's Channel</h4>
 
 ```log
-[INFO] |[e:\CDR\PL\temp.py] [e:\CDR\PL\temp.py] [2022-09-17] : Welcome
+[INFO] |[e:\CDR\PL\temp.py] [e:\CDR\PL\temp.py] [2022-09-17] [22:44:53.224367] : Welcome
 ```
 <h4>#class: sett</h4>
 
