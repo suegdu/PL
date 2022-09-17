@@ -1,6 +1,16 @@
 # PL Logging
 Personal Python Package for Logging.
 
+<a href="https://github.com/suegdu/PL#Presentation">Initial.</a>  
+
+<a href="https://github.com/suegdu/PL#advanced">Advanced.</a>  
+
+<a href="https://github.com/suegdu/PL#sett's-avails">Sett's avails.</a>  
+
+<a href="https://github.com/suegdu/PL#logging-with-a-discord-webhook">Logging with a Discord Webhook.</a>  
+
+<a href="https://github.com/suegdu/PL#print-out-logs">Printing Logs.</a>
+
 Version: 1.0.0  
 <h4>Installation:</h4>
 
@@ -80,6 +90,21 @@ pl.Log(fl=__file__,cont="Welcome",lev="INFO") # Call
 
 ```log
 [INFO] |[e:\CDR\PL\temp.py] [2022-09-05] : Welcome
+```
+# Logging with A Discord Webhook
+<h4>#main.py</h4>
+
+```py
+import pl
+
+pl.ds_webhook(webhook="i am a discord webhook url.",cont="Welcome",fl=__file__)
+
+```
+
+<h4>#The Discord's Channel</h4>
+
+```log
+[INFO] |[e:\CDR\PL\temp.py] [e:\CDR\PL\temp.py] [2022-09-17] : Welcome
 ```
 <h4>#class: sett</h4>
 
