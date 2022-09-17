@@ -7,7 +7,7 @@ Personal Python Package for Logging.
 
 <a href="https://github.com/suegdu/PL#advanced">Advanced.</a>  
 
-<a href="https://github.com/suegdu/PL#sett's-avails">Sett's avails.</a>  
+<a href="https://github.com/suegdu/PL#setts-avails">Sett's avails.</a>  
 
 <a href="https://github.com/suegdu/PL#logging-with-a-discord-webhook">Logging with a Discord Webhook.</a>  
 
