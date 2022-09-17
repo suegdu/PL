@@ -1,6 +1,8 @@
 # PL Logging
 Personal Python Package for Logging.
 
+<a href="https://github.com/suegdu/PL/releases">Releases.</a>  
+
 <a href="https://github.com/suegdu/PL#Presentation">Initial.</a>  
 
 <a href="https://github.com/suegdu/PL#advanced">Advanced.</a>  
