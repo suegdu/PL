@@ -288,7 +288,7 @@ Main frame for logging with Discord's Webhook.
 * fl: File trace(Path)  e.g: `fl=__file__`
 * webhook: A valid Discord Webhook url.
 * username: A custom Discord Webhook agent username.
-* avatar_url: A custom Discord Webhook agent avatar.(if you did provide an unvalid avatar url it the log wont be sent without any errors, leaves you with unknown exception.)
+* avatar_url: A custom Discord Webhook agent avatar.(if you did provide an unvalid avatar url it the log wont be sent without any errors, leaves you with an unknown exception(s).)
 
 For some default applies try setting the `sett` class.
 """
