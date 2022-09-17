@@ -1,3 +1,11 @@
+"""
+Personal Python Package For Logging
+
+Original Source: https://github.com/suegdu/PL
+
+Author: suegdu
+--
+"""
 from .pl import *
 __version__ = "1.0.0"
 __title__ = "PL"
